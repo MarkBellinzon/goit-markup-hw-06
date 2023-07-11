@@ -45,11 +45,27 @@ ol {
 }
 
 .container {
-  width: 1158px;
+  min-width: 320px;
+  max-width: 428px;
   margin-left: auto;
   margin-right: auto;
+
+  /* width: 1158px;
+  margin-left: auto;
+  margin-right: auto; */
   padding-left: 15px;
   padding-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
 }
 
 /**
@@ -234,11 +250,21 @@ ol {
 }
 
 .line-cont {
-  display: flex;
-  gap: 24px;
+  display: inline-flex;
+  flex-direction: column;
+
+  gap: 72px;
 }
 
-.strategy-cont {
+@media screen and (min-width: 1158px) {
+  .line-cont {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+.line-cont .strategy-cont {
   width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
 }
@@ -268,19 +294,32 @@ ol {
 }
 
 .sectionn-list {
+  font-family: Roboto;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+
   color: var(--hero-background-color);
   font-weight: 500;
-  font-size: 20px;
+  /* font-size: 20px; */
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin: 0 0 8px;
 }
+
+@media screen and (min-width: 1158px) {
+  .sectionn-list {
+    font-size: 20px;
+  }
+}
+
 .textt-list {
   color: var(--branded-color);
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-decoration: none;
+  width: 396px;
 }
 
 .section-tittle {
@@ -349,14 +388,25 @@ ol {
 }
 
 .icon-container {
-  display: flex;
+  display: none;
+  /* display: flex;
   align-items: center;
   justify-content: center;
   height: 112px;
-  background-color: #f4f4fd;
+  background-color: #f4f4fd; */
 
   border-radius: 4px;
   margin-bottom: 8px;
+}
+
+@media only screen and (min-width: 1158px) {
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #f4f4fd;
+  }
 }
 
 /**
@@ -924,14 +974,12 @@ card:focus {
 }
 
 .checkbox-point {
- 
   cursor: pointer;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: var(--subtle-text-color);
   align-items: baseline;
- 
 }
 
 .checkbox-input:checked {
