@@ -149,6 +149,14 @@ ol {
   }
 }
 
+@media only screen and (min-width: 1158px) {
+  .header-address {
+    flex-direction: row;
+    gap: 40px;
+    padding-right: 141px;
+  }
+}
+
 .logo-studio {
   color: var(--hero-background-color);
 }
@@ -290,13 +298,14 @@ ol {
   gap: 72px;
 }
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .line-cont {
-    gap: 24px;
+    flex-direction: row;
+    gap: 72px 24px;
   }
 }
 
-@media only screen and (min-width: 1158px) {
+@media screen and (min-width: 1158px) {
   .line-cont {
     display: flex;
     flex-direction: row;
@@ -304,19 +313,27 @@ ol {
   }
 }
 
-.line-cont .strategy-cont {
+/* .line-cont .strategy-cont {
   width: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
-}
+} */
 
 .doing-cont {
   display: flex;
   gap: 24px;
 }
 
+/* @media only screen and (min-width: 768px) {
+  .team-container {
+    display: flex;
+    padding: 0%;
+  }
+} */
+
 .team-cont {
   display: inline-flex;
   flex-direction: column;
+
   padding: 0 82px;
   gap: 72px;
   /* display: flex;
@@ -324,19 +341,27 @@ ol {
   justify-content: center; */
 }
 
+/* @media only screen and (min-width: 768px) {
+  .team-cont {
+    padding: 0;
+  }
+} */
+
 @media only screen and (min-width: 768px) {
   .team-cont {
-    /* display: flex;
+    display: flex;
     flex-wrap: wrap;
-    gap: 32px; */
+    flex-direction: row;
+    gap: 64px 24px;
+    /* flex-basis: calc((100% - 24px) - 2); */
+    /* padding: 0; */
   }
 }
 
 @media screen and (min-width: 1158px) {
   .team-cont {
-    display: flex;
     gap: 24px;
-    justify-content: center;
+    padding: 0;
   }
 }
 
@@ -541,15 +566,21 @@ ol {
   gap: 24px; */
 }
 
+@media screen and (min-width: 768px) {
+  .clients-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+    flex-basis: calc((100% - 48px) / 3);
+  }
+}
+
 @media screen and (min-width: 1158px) {
   .clients-list {
     display: flex;
     justify-content: center;
     gap: 24px;
   }
-}
-
-.clients-item {
 }
 
 .clients-link {
@@ -600,6 +631,12 @@ ol {
   /* display: inline-block; */
 }
 
+@media only screen and (min-width: 768px) {
+  .footer-logo {
+    display: inline-block;
+  }
+}
+
 @media screen and (min-width: 1158px) {
   .footer-logo {
     display: inline-block;
@@ -631,6 +668,11 @@ ol {
   letter-spacing: 0.02em;
   color: var(--brand-color);
   margin-bottom: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .icon-footer {
+  }
 }
 
 .footer-list {
@@ -673,10 +715,22 @@ ol {
   align-items: baseline; */
 }
 
+@media only screen and (min-width: 768px) {
+  .f-container {
+    flex-wrap: wrap;
+    margin-left: 108px;
+    flex-direction: row;
+    align-items: baseline;
+  }
+}
+
 @media screen and (min-width: 1158px) {
   .f-container {
     display: flex;
+    margin-left: 0;
+    gap: unset;
     align-items: baseline;
+    justify-content: center;
   }
 }
 
@@ -723,6 +777,14 @@ ol {
   /* gap: 24px; */
 }
 
+@media screen and (min-width: 768px) {
+  .footer-form {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 24px;
+  }
+}
+
 @media screen and (min-width: 1158px) {
   .footer-form {
     display: flex;
@@ -739,6 +801,12 @@ ol {
   margin-bottom: 16px;
 
   text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-text-input {
+    text-align: start;
+  }
 }
 
 @media screen and (min-width: 1158px) {
