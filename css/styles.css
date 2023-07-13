@@ -230,6 +230,13 @@ img {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media only screen and (min-width: 768px) {
+  .address-link {
+    font-size: 12px;
+    line-height: 1.17;
+  }
+}
+
 .address-link:hover,
 .address-link:focus {
   color: var(--pressed-state-color);
@@ -291,8 +298,8 @@ img {
 
 .hero-background {
   background-color: var(--hero-background-color);
-  padding: 188px 0;
-  max-width: 1440px;
+  padding: 112px 0;
+
   margin: auto;
 
   background-image: linear-gradient(
@@ -304,6 +311,13 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+@media only screen and (min-width: 1158px) {
+  .hero-background {
+    max-width: 1440px;
+    padding: 188px 0;
+  }
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -417,6 +431,12 @@ img {
     margin: 0 0 8px;
   }
 } */
+
+@media only screen and (min-width: 768px) {
+  .sectionn-list {
+    text-align: left;
+  }
+}
 
 @media screen and (min-width: 1158px) {
   .sectionn-list {
@@ -538,8 +558,7 @@ img {
 */
 
 .team-container {
-  max-width: 264px;
-  min-width: 264px;
+  max-width: 296px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -845,7 +864,7 @@ img {
 @media only screen and (min-width: 768px) {
   .f-container {
     flex-wrap: wrap;
-    margin-left: 108px;
+    max-width: 584px;
     flex-direction: row;
     align-items: baseline;
   }
@@ -954,7 +973,7 @@ img {
   background: var(--dark-color);
   color: var(--brand-color);
   font-size: 12px;
-  width: 264px;
+  width: 398px;
   height: 40px;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -1160,7 +1179,7 @@ card:focus {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  width: 392px;
+  width: 320px;
 
   min-height: 584px;
   background: var(--modal-background-color);
@@ -1170,6 +1189,12 @@ card:focus {
   border-radius: 4px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   padding: 72px 24px 24px 24px;
+}
+
+@media only screen and (min-width: 428px) {
+  .modal {
+    width: 392px;
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -1499,17 +1524,29 @@ card:focus {
 
 .mobile-list {
   display: flex;
-  gap: 56px;
+  gap: 40px;
+}
+
+@media only screen and (min-width: 428px) {
+  .mobile-list {
+    gap: 56px;
+  }
 }
 
 .mobile-tel-link {
   color: var(--primary-brand-color);
   font-family: Roboto, sans-serif;
-  font-size: 36px;
+  font-size: 26px;
   font-weight: 700;
   font-style: normal;
   line-height: 1.11;
   letter-spacing: 0.02em;
+}
+
+@media only screen and (min-width: 428px) {
+  .mobile-tel-link {
+    font-size: 36px;
+  }
 }
 
 .mobile-address-link {
