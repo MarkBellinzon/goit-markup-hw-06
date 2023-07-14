@@ -973,7 +973,7 @@ img {
   background: var(--dark-color);
   color: var(--brand-color);
   font-size: 12px;
-  width: 398px;
+  width: 264px;
   height: 40px;
   line-height: 1.5;
   letter-spacing: 0.04em;
@@ -983,11 +983,17 @@ img {
   margin-bottom: 16px;
 }
 
-/* @media screen and (min-width: 1158px) {
+@media only screen and (min-width: 428px) {
+  .footer-input {
+    width: 398px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
   .footer-input {
     width: 264px;
   }
-} */
+}
 
 .footer-input::placeholder {
   color: var(--brand-color);
